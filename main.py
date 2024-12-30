@@ -154,9 +154,74 @@ if uploaded_file:
         st.markdown("### Description")
         st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The gray shaded area represents the range 121-140 with a label for the average human pass rate, and the red line represents the maximum score of 210.")
 
-    # Tab 2: Model Costs
+    # Tab 2: Model Costs vs Correct Answers with Leader Lines
     with tab2:
-        st.write("Coming Soon")
+        # Filter the correct answers
+        filtered_correct_answers = filtered_df[filtered_df['Correct'] == True]
+
+        # Calculate the average cost and number of correct answers per model
+        cost_correct_data = filtered_correct_answers.groupby('Model').agg(
+            Average_Cost=('total_cost', lambda x: round(x.mean(), 5)),  # Use the 'total_cost' column and round to 2 decimal places
+            Correct=('Correct', 'sum')
+        ).reset_index()
+
+        # Add offsets for labels to avoid overlapping (customize for your dataset if necessary)
+        cost_correct_data['Label_X'] = cost_correct_data['Average_Cost'] + 0.0015
+        cost_correct_data['Label_Y'] = cost_correct_data['Correct'] + 8
+
+        # Check for overlapping labels and adjust positions
+        for i in range(len(cost_correct_data)):
+            for j in range(i + 1, len(cost_correct_data)):
+                if abs(cost_correct_data.at[i, 'Label_X'] - cost_correct_data.at[j, 'Label_X']) < 0.002 and \
+            abs(cost_correct_data.at[i, 'Label_Y'] - cost_correct_data.at[j, 'Label_Y']) < 10:
+                    if cost_correct_data.at[j, 'Label_Y'] > cost_correct_data.at[i, 'Label_Y']:
+                        cost_correct_data.at[j, 'Label_Y'] -= 10  # Move label below the point
+                    else:
+                        cost_correct_data.at[j, 'Label_Y'] += 10  # Move label above the point
+
+        # Scatter plot: Average Cost vs Number of Correct Answers
+        scatter = alt.Chart(cost_correct_data).mark_point(size=60).encode(
+            x=alt.X('Average_Cost:Q', title='Average Cost (Cents)'),
+            y=alt.Y(
+                'Correct:Q',
+                title='Number of Questions Correct',
+                scale=alt.Scale(domain=[100, cost_correct_data['Correct'].max() + 10])  # Start y-axis at 100
+            ),
+            tooltip=['Model:N', 'Average_Cost:Q', 'Correct:Q']
+        ).properties(
+            title='Average Cost vs Number of Correct Answers',
+            height=600,
+            width=800
+        )
+
+        # Add lines connecting the text labels to the points
+        lines = alt.Chart(cost_correct_data).mark_line(color='gray').encode(
+            x='Average_Cost:Q',
+            y='Correct:Q',
+            x2='Label_X:Q',
+            y2='Label_Y:Q',
+            tooltip=['Model:N', 'Average_Cost:Q', 'Correct:Q']
+        )
+
+        # Add text labels to the points with offsets
+        labels = alt.Chart(cost_correct_data).mark_text(
+            align='left',
+            baseline='middle',
+            fontSize=10
+        ).encode(
+            x='Label_X:Q',
+            y='Label_Y:Q',
+            text='Model:N',
+            tooltip=['Model:N', 'Average_Cost:Q', 'Correct:Q']
+        )
+
+        # Combine scatter plot, leader lines, and labels
+        cost_correct_chart = scatter + lines + labels
+
+        # Display the chart
+        st.altair_chart(cost_correct_chart, use_container_width=True)
+        st.markdown("### Description")
+        st.write("This chart shows the relationship between the average cost per question (in cents) and the number of correct answers for each AI model. Leader lines connect model labels to the respective data points.")
 
     # Tab 3: Correct Answers by Legal Category
     with tab3:
