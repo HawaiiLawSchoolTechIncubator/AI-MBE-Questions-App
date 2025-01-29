@@ -105,12 +105,12 @@ if uploaded_file:
         )
 
         # Semi-transparent shaded range between 121 and 140
-        shaded_range = alt.Chart(pd.DataFrame({'y_start': [121], 'y_end': [140]})).mark_rect(
+        shaded_range = alt.Chart(pd.DataFrame({'Low End': [121], 'High End': [140]})).mark_rect(
             color='lightgray', 
             opacity=0.3
         ).encode(
-            y='y_start:Q',
-            y2='y_end:Q'
+            y='Low End:Q',
+            y2='High End:Q'
         )
 
         # Text annotation for the shaded box
