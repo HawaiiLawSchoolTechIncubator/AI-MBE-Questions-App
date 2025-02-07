@@ -95,16 +95,41 @@ if uploaded_file:
         ).properties(
             title='Percentage of Correct Answers by Model',
             height=800
-        ).configure_axisX(
+        )
+
+        # Add shaded range for human pass rate
+        shaded_range = alt.Chart(pd.DataFrame({'Low End': [58], 'High End': [67]})).mark_rect(
+            color='lightgray',
+            opacity=0.5
+        ).encode(
+            y='Low End:Q',
+            y2='High End:Q'
+        )
+
+        # Add text annotation for the shaded range
+        shaded_text = alt.Chart(pd.DataFrame({'y': [70], 'text': ['Pass Rate (Gray Box)']})).mark_text(
+            align='right',
+            baseline='middle',
+            fontSize=12,
+            color='black',
+            dx=-10
+        ).encode(
+            x=alt.value('width'),
+            y='y:Q',
+            text='text:N'
+        )
+
+        # Combine charts and configure
+        combined_chart = (bars + shaded_range + shaded_text).configure_axisX(
             labelAngle=-45,
             labelFontSize=12,
             labelLimit=500,
             labelOverlap=False
         )
 
-        st.altair_chart(bars, use_container_width=True)
+        st.altair_chart(combined_chart, use_container_width=True)
         st.markdown("### Description")
-        st.write("This bar chart shows the percentage of questions each model answered correctly, color-coded by AI Platform.")
+        st.write("This bar chart shows the percentage of questions each model answered correctly, color-coded by AI Platform. The gray shaded area represents the pass rate across different states range of 58-67%.")
 
     with tab2:
         filtered_correct_answers = filtered_df[filtered_df['Correct'] == True]
@@ -117,7 +142,7 @@ if uploaded_file:
 
         # Bar chart with color encoding for 'AI Platform'
         bars = alt.Chart(correct_counts).mark_bar().encode(
-            x=alt.X('Model', sort='-y', title='Model'),
+            x=alt.X('Model', sort='-y', title='Model', axis=alt.Axis(labelAngle=-45, labelOverlap=False)),
             y=alt.Y(
                 'Correct',
                 title='Correct Answers',
@@ -144,7 +169,7 @@ if uploaded_file:
         )
 
         # Text annotation for the shaded box, aligned to the far right
-        shaded_text = alt.Chart(pd.DataFrame({'y': [145], 'text': ['Average Human Pass Rate (Gray Box)']})).mark_text(
+        shaded_text = alt.Chart(pd.DataFrame({'y': [145], 'text': ['Pass Rate (Gray Box)']})).mark_text(
             align='right',
             baseline='middle',
             fontSize=12,
@@ -172,14 +197,14 @@ if uploaded_file:
             text='text:N'
         )
 
-        # Combine charts
-        combined_chart = (bars + shaded_range + shaded_text + line + max_score_text).configure_axis(
+        # Combine charts and configure
+        combined_chart = (bars + shaded_range + shaded_text + line + max_score_text).configure_axisX(
+            labelAngle=-45,
             labelFontSize=12,
-            labelAngle=270,
-            labelLimit=500
+            labelLimit=500,
+            labelOverlap=False
         )
 
         st.altair_chart(combined_chart, use_container_width=True)
         st.markdown("### Description")
-        st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The gray shaded area represents the range 121-140 with a label for the average human pass rate, and the red line represents the maximum score of 210.")
-
+        st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The gray shaded area represents the range 121-140 with a label for the pass rate in different states, and the red line represents the maximum score of 210.")
