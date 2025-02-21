@@ -208,3 +208,4 @@ if uploaded_file:
         st.altair_chart(combined_chart, use_container_width=True)
         st.markdown("### Description")
         st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The gray shaded area represents the range 121-140 with a label for the pass rate in different states, and the red line represents the maximum score of 210.")
+st.write("The code for the benchmark project can be found at https://github.com/HawaiiLawSchoolTechIncubator/AI-MBE-Benchmark")
