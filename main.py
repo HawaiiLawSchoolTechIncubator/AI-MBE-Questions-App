@@ -174,7 +174,7 @@ if uploaded_file:
 
         # Add text annotation for the shaded range
         shaded_text = alt.Chart(pd.DataFrame({'y': [70], 'text': ['Pass Rate (Gray Box)']})).mark_text(
-            align='right', baseline='middle', fontSize=12, color='black', dx=-10
+            align='right', baseline='middle', fontSize=12, color='black', dx=-10, dy=5
         ).encode(
             x=alt.value('width'),
             y='y:Q',
@@ -188,7 +188,7 @@ if uploaded_file:
 
         # Add text annotation for the human line, moved to the right
         human_text = alt.Chart(pd.DataFrame({'y': [72], 'text': ['Human Average (70.9%)']})).mark_text(
-            align='right', baseline='middle', fontSize=12, color='red', dx=-10
+            align='right', baseline='middle', fontSize=12, color='red', dx=-10, dy=-7
         ).encode(
             x=alt.value('width'),  # Position at right edge
             y='y:Q',
@@ -260,7 +260,7 @@ if uploaded_file:
 
         # Text annotation for the shaded box
         shaded_text = alt.Chart(pd.DataFrame({'y': [145], 'text': ['Pass Rate (Gray Box)']})).mark_text(
-            align='right', baseline='middle', fontSize=12, color='black', dx=-10
+            align='right', baseline='middle', fontSize=12, color='black', dx=-10, dy=5
         ).encode(
             x=alt.value('width'),
             y='y:Q',
