@@ -138,17 +138,11 @@ if uploaded_file:
         percentage_correct = pd.merge(total_questions, correct_answers, on=['Model', 'AI Platform'])
         percentage_correct['Percentage'] = (percentage_correct['Correct'] / percentage_correct['Total']) * 100
         
-        # Create a dataframe for Human Average
-        human_average = pd.DataFrame({
-            'Model': ['Human Average'],
-            'AI Platform': ['Human'],
-            'Total': [210],
-            'Correct': [149],
-            'Percentage': [70.9]
-        })
-        
-        # Concatenate with the existing data
-        percentage_correct = pd.concat([percentage_correct, human_average], ignore_index=True)
+        # Remove Human from the dataset - we'll just show the red line
+        percentage_correct = percentage_correct[percentage_correct['AI Platform'] != 'Human']
+
+        # Get platform colors without Human
+        filtered_platform_colors = {k: v for k, v in platform_colors.items() if k != 'Human'}
 
         # Bar chart with fixed color mapping for AI Platform
         bars = alt.Chart(percentage_correct).mark_bar().encode(
@@ -160,8 +154,8 @@ if uploaded_file:
                     axis=alt.Axis(ticks=True, values=[0, 20, 40, 60, 80, 100])),
             color=alt.Color('AI Platform:N',
                             scale=alt.Scale(
-                                domain=list(platform_colors.keys()),
-                                range=list(platform_colors.values())
+                                domain=list(filtered_platform_colors.keys()),
+                                range=list(filtered_platform_colors.values())
                             ),
                             legend=alt.Legend(title="AI Platform")),
             tooltip=['Model', 'Percentage', 'AI Platform']
@@ -192,10 +186,11 @@ if uploaded_file:
             y='y:Q'
         )
 
-        # Add text annotation for the human line
-        human_text = alt.Chart(pd.DataFrame({'y': [74], 'text': ['Human Average (70.9%)']})).mark_text(
-            align='left', baseline='middle', dx=5, color='red', fontSize=12
+        # Add text annotation for the human line, moved to the right
+        human_text = alt.Chart(pd.DataFrame({'y': [72], 'text': ['Human Average (70.9%)']})).mark_text(
+            align='right', baseline='middle', fontSize=12, color='red', dx=-10
         ).encode(
+            x=alt.value('width'),  # Position at right edge
             y='y:Q',
             text='text:N'
         )
@@ -211,7 +206,7 @@ if uploaded_file:
 
         st.altair_chart(combined_chart, use_container_width=True)
         st.markdown("### Description")
-        st.write("This bar chart shows the percentage of questions each model answered correctly, color-coded by AI Platform. The gray shaded area represents the pass rate range of 58-67%. The Human Average bar represents the average human performance of 70.9% correct.")
+        st.write("This bar chart shows the percentage of questions each model answered correctly, color-coded by AI Platform. The gray shaded area represents the pass rate range of 58-67%. The red line represents the Human Average performance of 70.9% correct.")
         
         # Add pivot table with raw data
         st.markdown("### Raw Performance Data")
@@ -226,15 +221,13 @@ if uploaded_file:
         # Group by 'Model' and 'AI Platform'
         correct_counts = filtered_correct_answers.groupby(['Model', 'AI Platform']).size().reset_index(name='Correct')
 
-        # Add Human Average data point
-        human_average = pd.DataFrame({
-            'Model': ['Human Average'],
-            'AI Platform': ['Human'],
-            'Correct': [149]
-        })
+        # Remove Human from the dataset - we'll just show the red line
+        correct_counts = correct_counts[correct_counts['AI Platform'] != 'Human']
         
-        correct_counts = pd.concat([correct_counts, human_average], ignore_index=True)
-        correct_counts['Correct'] = pd.to_numeric(correct_counts['Correct'], errors='coerce')
+        # Get platform colors without Human
+        filtered_platform_colors = {k: v for k, v in platform_colors.items() if k != 'Human'}
+
+        # Sort by number of correct answers
         correct_counts = correct_counts.sort_values(by='Correct', ascending=False)
 
         # Bar chart with fixed color mapping for AI Platform
@@ -247,8 +240,8 @@ if uploaded_file:
                     axis=alt.Axis(ticks=True, values=[0, 50, 100, 150, 200, 210])),
             color=alt.Color('AI Platform:N',
                             scale=alt.Scale(
-                                domain=list(platform_colors.keys()),
-                                range=list(platform_colors.values())
+                                domain=list(filtered_platform_colors.keys()),
+                                range=list(filtered_platform_colors.values())
                             ),
                             legend=alt.Legend(title="AI Platform")),
             tooltip=['Model', 'Correct', 'AI Platform']
@@ -274,23 +267,35 @@ if uploaded_file:
             text='text:N'
         )
 
-        # Red line at y=210
-        line = alt.Chart(pd.DataFrame({'y': [210]})).mark_rule(color='red', strokeWidth=2).encode(
+        # Red line at y=149 for human average
+        human_line = alt.Chart(pd.DataFrame({'y': [149]})).mark_rule(color='red', strokeWidth=2).encode(
             y='y:Q'
         )
 
-        # Text annotation for the red line
-        max_score_text = alt.Chart(pd.DataFrame({'y': [215], 'text': ['Maximum Score (210)']})).mark_text(
-            align='left', baseline='middle', dx=5, color='red'
+        # Text annotation for the red line positioned to the right and above the line
+        human_text = alt.Chart(pd.DataFrame({'y': [154], 'text': ['Human Average (149)']})).mark_text(
+            align='right', baseline='middle', fontSize=12, color='red', dx=-10
         ).encode(
+            x=alt.value('width'),  # Position at right edge
             y='y:Q',
             text='text:N'
         )
 
-        combined_chart = (bars + shaded_range + shaded_text + line + max_score_text).configure_axisX(
-            labelAngle=-45, labelFontSize=12, labelLimit=500
+        # Red line at y=210 for max score
+        max_line = alt.Chart(pd.DataFrame({'y': [210]})).mark_rule(color='red', strokeWidth=2).encode(
+            y='y:Q'
         )
-        combined_chart = (bars + shaded_range + shaded_text + line + max_score_text).configure_axisX(
+
+        # Text annotation for the max score line
+        max_score_text = alt.Chart(pd.DataFrame({'y': [215], 'text': ['Maximum Score (210)']})).mark_text(
+            align='right', baseline='middle', dx=-10, color='red'
+        ).encode(
+            x=alt.value('width'),
+            y='y:Q',
+            text='text:N'
+        )
+
+        combined_chart = (bars + shaded_range + shaded_text + human_line + human_text + max_line + max_score_text).configure_axisX(
             labelAngle=-45,
             labelFontSize=12,
             labelLimit=1000,  # Increased label limit
@@ -301,7 +306,7 @@ if uploaded_file:
 
         st.altair_chart(combined_chart, use_container_width=True)
         st.markdown("### Description")
-        st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The Human Average bar represents the average human performance of 149 correct answers. The gray shaded area represents the pass rate range of 121-140, and the red line represents the maximum score of 210.")
+        st.write("This bar chart shows the number of correct answers by each model, color-coded by AI Platform. The red horizontal line at 149 represents the Human Average performance. The gray shaded area represents the pass rate range of 121-140, and the top red line represents the maximum score of 210.")
         
         # Add pivot table with raw data
         st.markdown("### Raw Performance Data")
