@@ -325,7 +325,7 @@ if uploaded_file:
         correct_df = filtered_df[filtered_df['Correct'] == True]
         
         # Standardize criminal law categories
-        correct_df['Law Category'] = correct_df['Law Category'].replace('Criminal Law/Prosecution', 'Criminal Law and Procedure')
+        correct_df.loc[:, 'Law Category'] = correct_df['Law Category'].replace('Criminal Law/Prosecution', 'Criminal Law and Procedure')
         
         # Count correct answers by Model and Law Category
         category_counts = correct_df.groupby(['Model', 'AI Platform', 'Law Category']).size().reset_index(name='Count')
@@ -354,20 +354,27 @@ if uploaded_file:
         
         # Create a horizontal stacked bar chart
         chart = alt.Chart(category_counts).mark_bar().encode(
-            y=alt.Y('Model:N', title='AI Model', sort=sort_field),
+            y=alt.Y('Model:N', 
+               title='AI Model', 
+               sort=sort_field,
+               axis=alt.Axis(
+               labelLimit=300,  # Increase label width limit
+               labelOverlap=False,  # Prevent label overlap
+               labelFontSize=11  # Adjust font size if needed
+               )),
             x=alt.X('sum(Count):Q', title='Number of Questions Answered Correctly'),
             color=alt.Color('Law Category:N', 
-                            scale=alt.Scale(scheme='category20'),
-                            legend=alt.Legend(title="Legal Category", 
-                                            orient='bottom',
-                                            columns=2,  # Stack the legend in 2 columns
-                                            labelLimit=200)),
+                scale=alt.Scale(scheme='category20'),
+                legend=alt.Legend(title="Legal Category", 
+                    orient='top',  # Changed from 'bottom' to 'top'
+                    columns=2,  # Stack the legend in 2 columns
+                    labelLimit=200)),
             order=alt.Order('Law Category:N', sort='ascending'),
             tooltip=['Model', 'AI Platform', 'Law Category', 
-                    alt.Tooltip('Count:Q', title='Answers Correct out of 30')]
+            alt.Tooltip('Count:Q', title='Answers Correct out of 30')]
         ).properties(
             title='Correct Answers by Legal Category for Each Model',
-            height=25 * len(filtered_df['Model'].unique()),  # Dynamically set height based on number of models
+            height=max(600, 25 * len(filtered_df['Model'].unique())),  # Dynamically set height with minimum of 600px
             width=800
         )
         
