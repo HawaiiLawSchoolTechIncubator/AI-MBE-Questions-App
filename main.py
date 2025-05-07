@@ -121,12 +121,26 @@ if uploaded_file:
     </style>
     """, unsafe_allow_html=True)
     
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    # Add custom CSS to limit main container width
+    st.markdown("""
+    <style>
+        div[data-testid="stMainBlockContainer"] {
+            max-width: 70rem !important;
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-bottom: 0rem;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "📊 Percentage of Correct Answers", 
         "🎯 Number of Correct Answers", 
         "📚 Categories Answered Correctly",
         "💰 Cost Per Question",
-        "⏱️ Time Per Question"
+        "⏱️ Time Per Question",
+        "❓ Individual Question"
         
     ])
 
@@ -331,11 +345,11 @@ if uploaded_file:
         category_counts = correct_df.groupby(['Model', 'AI Platform', 'Law Category']).size().reset_index(name='Count')
         
         # Add sorting options
-        sort_options = ["Total Correct Answers (Default)", "Legal Category"]
+        sort_options = ["Total Correct Answers", "Legal Category"]
         sort_by = st.radio("Sort models by:", sort_options)
         
         # Create the sorting field based on user selection
-        if sort_by == "Total Correct Answers (Default)":
+        if sort_by == "Total Correct Answers":
             sort_field = alt.EncodingSortField(field='Count', op='sum', order='descending')
         else:  # By Legal Category
             # Create a temporary dataframe to determine the order
@@ -555,6 +569,65 @@ if uploaded_file:
                 st.dataframe(display_df.sort_values('Percentage Correct', ascending=False), hide_index=True)
             else:
                 st.write("Duration data is not available in the dataset.")
-
-
+        with tab6:
+            # Check if we have any selected models
+            if len(selected_models) > 0:
+                st.markdown("### Question Performance Analysis")
+                
+                # Create a pivot table where rows are questions and columns are models
+                question_pivot = filtered_df.pivot_table(
+                    index=['Question Number', 'Law Category'],
+                    columns='Model',
+                    values='Correct',
+                    aggfunc=lambda x: 
+                        'Correct' if all(isinstance(val, bool) for val in x) and x.any() 
+                        else (
+                            'Incorrect' if all(isinstance(val, bool) for val in x)
+                            else print(f"Unexpected value in 'Correct' column: {x}")
+                        )
+                )
+                
+                # Create a dataframe counting correct answers per question
+                question_summary = filtered_df.groupby('Question Number').agg(
+                    total_correct=('Correct', lambda x: sum(x)),
+                    total_models=('Model', 'nunique')
+                )
+                
+                # Calculate percentage of models that got each question correct
+                question_summary['Percentage Correct'] = (question_summary['total_correct'] / question_summary['total_models'] * 100).round(1)
+                
+                # Reset index for display
+                question_pivot_reset = question_pivot.reset_index()
+                question_summary_reset = question_summary.reset_index()
+                
+                # Merge the two dataframes
+                merged_table = pd.merge(
+                    question_pivot_reset, 
+                    question_summary_reset[['Question Number', 'Percentage Correct']],
+                    on='Question Number'
+                )
+                
+                # Sort by percentage correct (descending)
+                merged_table = merged_table.sort_values('Percentage Correct', ascending=False)
+                
+                # Format the percentage column
+                merged_table['Percentage Correct'] = merged_table['Percentage Correct'].map('{:.1f}%'.format)
+                
+                st.write("This table shows which questions were answered correctly by which models. The 'Percentage Correct' column shows the percentage of selected models that answered each question correctly.")
+                st.dataframe(merged_table, hide_index=True, height=600)
+                
+                # Show the easiest and hardest questions
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("### Easiest Questions")
+                    easiest = merged_table.head(5)
+                    st.dataframe(easiest[['Question Number', 'Law Category', 'Percentage Correct']], hide_index=True)
+                    
+                with col2:
+                    st.markdown("### Hardest Questions")
+                    hardest = merged_table.tail(5).sort_values('Percentage Correct')
+                    st.dataframe(hardest[['Question Number', 'Law Category', 'Percentage Correct']], hide_index=True)
+            else:
+                st.write("Please select at least one model to view question analysis.")
     st.write("The code for the benchmark project can be found at https://github.com/HawaiiLawSchoolTechIncubator/AI-MBE-Benchmark")
