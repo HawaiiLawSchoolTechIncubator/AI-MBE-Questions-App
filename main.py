@@ -574,19 +574,17 @@ if uploaded_file:
             if len(selected_models) > 0:
                 st.markdown("### Question Performance Analysis")
                 
+                # Display rows where Model equals DeepSeek-R1
+
+                # Standardize criminal law categories
+                filtered_df.loc[:, 'Law Category'] = filtered_df['Law Category'].replace('Criminal Law/Prosecution', 'Criminal Law and Procedure')
                 # Create a pivot table where rows are questions and columns are models
                 question_pivot = filtered_df.pivot_table(
                     index=['Question Number', 'Law Category'],
                     columns='Model',
                     values='Correct',
-                    aggfunc=lambda x: 
-                        'Correct' if all(isinstance(val, bool) for val in x) and x.any() 
-                        else (
-                            'Incorrect' if all(isinstance(val, bool) for val in x)
-                            else print(f"Unexpected value in 'Correct' column: {x}")
-                        )
+                    aggfunc=lambda x: 'Correct' if x.any() else 'Incorrect'
                 )
-                
                 # Create a dataframe counting correct answers per question
                 question_summary = filtered_df.groupby('Question Number').agg(
                     total_correct=('Correct', lambda x: sum(x)),
@@ -607,27 +605,51 @@ if uploaded_file:
                     on='Question Number'
                 )
                 
-                # Sort by percentage correct (descending)
-                merged_table = merged_table.sort_values('Percentage Correct', ascending=False)
+                # First sort by percentage correct (descending) as numbers
+                merged_table = merged_table.sort_values('Question Number')
                 
-                # Format the percentage column
-                merged_table['Percentage Correct'] = merged_table['Percentage Correct'].map('{:.1f}%'.format)
-                
+                # Then format the percentage column after sorting
+                #merged_table['Percentage Correct'] = merged_table['Percentage Correct'].map('{:.1f}%'.format)
+                # Format the percentage column after sorting
+                #merged_table['Percentage Correct'] = merged_table['Percentage Correct'].map('{:.1f}%'.format)
+
+                styler = merged_table.style.format({
+                    'Percentage Correct': '{:.1f}%'
+                })
+
+
                 st.write("This table shows which questions were answered correctly by which models. The 'Percentage Correct' column shows the percentage of selected models that answered each question correctly.")
-                st.dataframe(merged_table, hide_index=True, height=600)
+                st.dataframe(styler, hide_index=True, height=600)
                 
                 # Show the easiest and hardest questions
                 col1, col2 = st.columns(2)
                 
                 with col1:
                     st.markdown("### Easiest Questions")
-                    easiest = merged_table.head(5)
-                    st.dataframe(easiest[['Question Number', 'Law Category', 'Percentage Correct']], hide_index=True)
-                    
+                    easiest = merged_table.head(10)
+
+                    # Select columns first, then apply styling
+                    easiest_display = easiest[['Question Number', 'Law Category', 'Percentage Correct']]
+
+                    # Apply styler to the selected columns
+                    easiest_styler = easiest_display.style.format({
+                        'Percentage Correct': '{:.1f}%'
+                    })
+
+                    st.dataframe(easiest_styler, hide_index=True)
                 with col2:
                     st.markdown("### Hardest Questions")
-                    hardest = merged_table.tail(5).sort_values('Percentage Correct')
-                    st.dataframe(hardest[['Question Number', 'Law Category', 'Percentage Correct']], hide_index=True)
+                    hardest = merged_table.sort_values('Percentage Correct', ascending=True).head(10)
+                    
+                    # Select columns first, then apply styling
+                    hardest_display = hardest[['Question Number', 'Law Category', 'Percentage Correct']]
+                    
+                    # Apply styler to the selected columns
+                    hardest_styler = hardest_display.style.format({
+                        'Percentage Correct': '{:.1f}%'
+                    })
+                    
+                    st.dataframe(hardest_styler, hide_index=True)
             else:
                 st.write("Please select at least one model to view question analysis.")
     st.write("The code for the benchmark project can be found at https://github.com/HawaiiLawSchoolTechIncubator/AI-MBE-Benchmark")
