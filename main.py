@@ -5,13 +5,13 @@ import altair as alt
 # Fixed color mapping for AI Platforms
 platform_colors = {
     "Human": "#AB63FA",
-    "Claude": "#636EFA",
-    "Gemini": "#EF553B",
-    "ChatGPT": "#00CC96",
-    "Llama": "#FFA15A",
-    "DeepSeek": "#19D3F3",
+    "Anthropic": "#636EFA",
+    "Google": "#EF553B",
+    "OpenAI": "#00CC96",
+    "Meta": "#FFA15A",
+    "DeepSeek AI": "#19D3F3",
     "Alibaba": "#FF6692",
-    "Grok": "#B6E880"
+    "xAI": "#B6E880"
 }
 
 # Load data from CSV
