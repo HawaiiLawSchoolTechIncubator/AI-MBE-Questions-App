@@ -94,6 +94,7 @@ if uploaded_file:
         border-radius: 4px;
         font-size: 16px;
         font-weight: 600;
+        color: black !important;
     }
     .stTabs [aria-selected="true"] {
         background-color: #e6f0ff;
@@ -134,6 +135,8 @@ if uploaded_file:
     </style>
     """, unsafe_allow_html=True)
 
+
+    
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "📊 Percentage of Correct Answers", 
         "🎯 Number of Correct Answers", 
@@ -141,7 +144,6 @@ if uploaded_file:
         "💰 Cost Per Question",
         "⏱️ Time Per Question",
         "❓ Individual Question"
-        
     ])
 
     # Tab 1: Correct Answers Bar Chart
