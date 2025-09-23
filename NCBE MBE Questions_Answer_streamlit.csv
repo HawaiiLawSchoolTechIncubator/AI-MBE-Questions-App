@@ -12259,3 +12259,213 @@ D,D,,D,471,289,0.004335,0.035325,760,0.03966,28.38233232,207,Real Property,D,cla
 C,C,,C,477,347,0.005205,0.035775,824,0.04098,18.74554491,208,Real Property,C,claude-opus-4-1-20250805,Anthropic,TRUE,9/21/2025
 A,A,,A,533,387,0.005805,0.039975,920,0.04578,18.75061417,209,Real Property,A,claude-opus-4-1-20250805,Anthropic,TRUE,9/21/2025
 A,A,,A,472,349,0.005235,0.0354,821,0.040635,19.08286285,210,Real Property,A,claude-opus-4-1-20250805,Anthropic,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,13.238554,1,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.87954307,2,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.72875476,3,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,22.41087961,4,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.28281879,5,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.68748164,6,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.49566603,7,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,14.29637313,8,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,17.05266738,9,Civil Procedure,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,14.06092548,10,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.69745088,11,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.69458938,12,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.6149323,13,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.36839366,14,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.96347308,15,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.7626729,16,Civil Procedure,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,21.90622497,17,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,17.48043656,18,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,FALSE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.15425014,19,Civil Procedure,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,13.69699407,20,Civil Procedure,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.24463892,21,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.4500699,22,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,13.75845671,23,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.48517036,24,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,18.64317799,25,Civil Procedure,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.56244779,26,Civil Procedure,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.44842672,27,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,26.44647193,28,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,15.88014889,29,Civil Procedure,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.1360538,30,Civil Procedure,B,gemini-2.5-pro-preview-06-05,Google,FALSE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,17.76327181,31,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.80246282,32,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.77810383,33,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.6318922,34,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.93230009,35,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,14.63004184,36,Constitutional Law,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.15846205,37,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,14.89489603,38,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,18.87674046,39,Constitutional Law,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,18.06610584,40,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.62775469,41,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,26.19467545,42,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,28.44312143,43,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.28484654,44,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.55877638,45,Constitutional Law,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.28649402,46,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.98164725,47,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,17.76572561,48,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.93433166,49,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.00963378,50,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.38877249,51,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.68144536,52,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.00263238,53,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.84843254,54,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.1623857,55,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.8688004,56,Constitutional Law,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,17.39835143,57,Constitutional Law,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.48657441,58,Constitutional Law,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.77266359,59,Constitutional Law,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,14.09669566,60,Constitutional Law,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,20.00268674,61,Contracts,C,gemini-2.5-pro-preview-06-05,Google,FALSE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.30486774,62,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.65610385,63,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,17.64432073,64,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,20.24584341,65,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.63733363,66,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.29501271,67,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.13671994,68,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.35506153,69,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.34907627,70,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,16.46040297,71,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,20.66576767,72,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,20.42755508,73,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.21160507,74,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,18.99194884,75,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,18.56947017,76,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.27911973,77,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,21.89949703,78,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.08850026,79,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,39.80549073,80,Contracts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+Redacted,Redacted,A,A,0,972,972,0,0.00972,0.00972,94.71309328,81,Contracts,B,gemini-2.5-pro-preview-06-05,Google,FALSE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.61916375,82,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,27.60132575,83,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,23.75468421,84,Contracts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,15.72965956,85,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.01830196,86,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.83137345,87,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,17.35971832,88,Contracts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.03804755,89,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.21547198,90,Contracts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.99943209,91,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.26691604,92,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,22.51554608,93,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,20.45125318,94,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.87200499,95,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,13.50546503,96,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.89996672,97,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,15.90653396,98,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.50986433,99,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,17.27794647,100,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,18.62170029,101,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.58004522,102,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,15.74478722,103,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.41851354,104,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.53027248,105,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,14.51358151,106,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.62731695,107,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.35284376,108,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,16.87444901,109,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.77672076,110,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,19.89018369,111,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,14.81907082,112,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,16.29317403,113,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,16.47719431,114,Criminal Law/Prosecution,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.21946764,115,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.19876456,116,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.65507364,117,Criminal Law/Prosecution,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,12.32326484,118,Criminal Law/Prosecution,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,32.01631951,119,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.72955632,120,Criminal Law/Prosecution,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,18.78828979,121,Evidence,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,20.05145526,122,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.75702333,123,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.1932261,124,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,14.19826841,125,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,14.61853266,126,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,12.39146304,127,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,21.01974821,128,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,12.44493818,129,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.24870157,130,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,20.53672242,131,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,12.43321061,132,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.18510151,133,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,21.2959435,134,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.09165192,135,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,25.35630703,136,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,17.20636415,137,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,15.93237305,138,Evidence,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,36.87728667,139,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,21.11465812,140,Evidence,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,17.91555572,141,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,16.15685606,142,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/21/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.93125939,143,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,16.85131884,144,Evidence,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,30.88131213,145,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,21.99329042,146,Evidence,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.13973689,147,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.75502038,148,Evidence,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,20.05823874,149,Evidence,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,25.00107574,150,Evidence,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,20.69501996,151,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.20330524,152,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,22.38203716,153,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,24.55078602,154,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,23.81970024,155,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,21.51779032,156,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.72690868,157,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,18.93865418,158,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.98788214,159,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,19.25533581,160,Torts,D,gemini-2.5-pro-preview-06-05,Google,FALSE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.87447476,161,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,15.48110223,162,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,17.76682687,163,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.95744228,164,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,22.31172919,165,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,26.07711363,166,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.50009847,167,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,25.69332051,168,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.51010823,169,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.39612675,170,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.79020119,171,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.22198057,172,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.53204203,173,Torts,A,gemini-2.5-pro-preview-06-05,Google,FALSE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,19.37490463,174,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.57531023,175,Torts,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,17.76173711,176,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.19122934,177,Torts,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.70626926,178,Torts,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,12.06143713,179,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,20.66028142,180,Torts,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,30.43554378,181,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,20.00338626,182,Real Property,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,22.20290565,183,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.38495946,184,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,17.89884758,185,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,22.28864026,186,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.55856299,187,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.80549431,188,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,24.5669589,189,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,22.75800467,190,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,17.35720134,191,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.67918754,192,Real Property,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,23.38340616,193,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,25.49017644,194,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,21.32114434,195,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.35511446,196,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,16.93140864,197,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.35230398,198,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,18.81054401,199,Real Property,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.67564631,200,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,15.98800564,201,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,21.38628173,202,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,13.84550095,203,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+B,B,,B,0,1,1,0,0.00001,0.00001,24.97311425,204,Real Property,B,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,19.18813348,205,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,18.61376524,206,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+D,D,,D,0,1,1,0,0.00001,0.00001,16.46714282,207,Real Property,D,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+C,C,,C,0,1,1,0,0.00001,0.00001,22.43366933,208,Real Property,C,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,20.10313702,209,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025
+A,A,,A,0,1,1,0,0.00001,0.00001,21.42283607,210,Real Property,A,gemini-2.5-pro-preview-06-05,Google,TRUE,9/22/2025

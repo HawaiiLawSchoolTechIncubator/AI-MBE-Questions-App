@@ -56,8 +56,7 @@ update_multiselect_style()
 
 # Main Streamlit app
 st.title("AI Model Performance Analysis on MBE Questions")
-st.write("This app analyzes the performance of AI models on a set of MBE sample questions from the Bar Exam.")
-st.write("This research was done at the University of Hawaii, William S. Richardson School of Law.")
+st.write("This app analyzes the performance of AI models on a set of MBE sample questions from the Bar Exam. This research was done at the University of Hawaii, William S. Richardson School of Law. Read the full research paper at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5291811")
 st.write("Authors: Matthew Stubenberg, Chloe Berridge, Thomas Fuerst Smith, and Joshua Casey")
 
 # Load the uploaded CSV file
